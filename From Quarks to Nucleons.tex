@@ -153,7 +153,7 @@ $$
 $$
 where N denotes nucleons, p and n. At next-to-leading order (NLO), one more operator with three derivatives arises
 $$
-\mathcal O_{15}^N = - ( \vec S_\chi \cdot \frac{\vec q } {m_N } ( ( \vec S_N \times \vec v_\bot ) \cdot \frac{\vec q }{m_N} )
+\mathcal O_{15}^N = - ( \vec S_\chi \cdot \frac{\vec q } {m_N } ) (( \vec S_N \times \vec v_\bot ) \cdot \frac{\vec q }{m_N} )
 $$
 the definition of momentum exchange is 
 $$
@@ -194,7 +194,31 @@ $$
 $$
 c_{12}^p = -8 \sum_q F_{T,0}^{q/p} \hat C_{10,q}^{(7)}
 $$
-while all other coefficients vanish at LO. The lower cases on the left hand side represents the coefficients of the non-relativistic operators. The expression for protons are given here while those for neutrons are just replacing p with n. The upper cases with hat on the right hand side represents the relativistic effective operators. The expressions for the form factors are given below. They represents the six different types of single-nucleon current corresponding to scattering of DM on a single nucleon or on a pion that attaches to the nucleon. 
+while all other coefficients vanish at LO. The lower cases on the left hand side represents the coefficients of the non-relativistic operators. The expression for protons are given here while those for neutrons are just replacing p with n. The upper cases with hat on the right hand side represents the relativistic effective operators. The expressions for the form factors are given below. They represents the seven different types of single-nucleon current corresponding to scattering of DM on a single nucleon or on a pion that attaches to the nucleon, shown in figure (). $F_1$ and $F_2$ are the vector current, while $F_1$, the Dirac form factors, just count the valence quarks at zero momentum exchange, and $F_2$, the Pauli form factors, uses input from proton and neutron magnetic moments for up and down, and [ 1606.07075 ] for strange quark magnetic moments. $F_A$ is the axial current. $F_S$ is the scalar current, using input from nuclear sigma terms. $F_P$ is the pseudo-scalar current. $F_G$ is the CP-even gluonic current, calculated from nuclear sigma terms values. $F_{\tilde G} $ is the CP-odd gluonic current, using inputs from various hadronic parameters. $F_{T,0}$ and $F_{T,1}$ are the tensor current, using as input from lattice QCD simulations. Roughly speaking, the form factors describes the currents content of each operator of nucleon. 
+The form factors are given by 
+$$
+<N'|\bar q \gamma^\mu q|N> = \bar u'_N [ F_1^{q/N}(q^2) \gamma^\mu + \frac{i}{2m_N} F_2^{q/N}(q^2) \sigma^{\mu\nu} q_\nu] u_N
+$$
+$$
+<N'|\bar q \gamma^\mu \gamma_5 q|N> = \bar u'_N [ F_A^{q/N}(q^2) \gamma^\mu \gamma_5 + \frac{i}{2m_N} F_2^{q/N}(q^2) \sigma^{\mu\nu} \gamma_5 q_\nu] u_N
+$$
+$$
+<N'| m_q \bar q q|N> = F_s^{q/N}(q^2)\bar u'_N  u_N
+$$
+$$
+<N'| m_q \bar q i \gamma_5 q|N> = F_P^{q/N}(q^2)\bar u'_N i \gamma_5 u_N
+$$
+$$
+<N'| \frac{\alpha_s }{12 \pi } G^{a\mu \nu } G_{\mu\nu }^{a} |N> = F_G^{N}(q^2)\bar u'_N  u_N
+$$
+$$
+<N'| \frac{\alpha_s }{8 \pi } G^{a\mu \nu } \tilde G_{\mu\nu }^{a} |N> = F_{\tilde G} ^{N}(q^2)\bar u'_N  i \gamma_5 u_N
+$$
+$$
+<N'|m_q \bar q \sigma^{\mu\nu} q|N> = \bar u'_N [F_{T,0}^{q/N}(q^2) \sigma^{\mu \nu } + \frac{i}{2m_N} \gamma^{ [\mu} q^{ \nu ] } F_{T,1}^{q/N} (q^2) +
+\frac{i}{m_N^2} q^{ [ \mu}k_{12}^{\nu ]} F_{T,2}^{q/N} (q^2) ] u_N
+$$
+where nucleon states and $u_N$ should also depend on their momenta, but we did not write them here explicitly. The form factors are only functions of $q^2$. 
 
 The non-relativistic coefficients in Lagrangian in Eq. \ref{lag2} worth some comments. In several cases, a single operator describing DM interactions with quarks and gluons matches onto more than one non-relativistic operator, already at leading order. For example, $\mathcal O_7^N$,$\mathcal O_8^N$,$\mathcal O_9^N$,$\mathcal O_{12}^N$ cannot be turned on individually as they always come accompanied with other, regardless of the UV operator they are mapped from. On the other hand, the spin-independent operator $\mathcal O_1^N$ can arise by themselves. The same is true for spin-dependent operator $\mathcal O_4^N$. Therefore, when performing direct detection analysis, the only consistent way would be to include the whole set of non-relativistic operators altogether. 
 
@@ -242,31 +266,7 @@ $$
 $$
 c_{10}^N  = \sum_q  F_P^{q/N} \hat C_{4q}^{(6)} +F_{\tilde G} \hat C_{3q}^{(6)}
 $$
-The form factors are given by 
-$$
-<N'|\bar q \gamma^\mu q|N> = \bar u'_N [ F_1^{q/N}(q^2) \gamma^\mu + \frac{i}{2m_N} F_2^{q/N}(q^2) \sigma^{\mu\nu} q_\nu] u_N
-$$
-$$
-<N'|\bar q \gamma^\mu \gamma_5 q|N> = \bar u'_N [ F_A^{q/N}(q^2) \gamma^\mu \gamma_5 + \frac{i}{2m_N} F_2^{q/N}(q^2) \sigma^{\mu\nu} \gamma_5 q_\nu] u_N
-$$
-$$
-<N'| m_q \bar q q|N> = F_s^{q/N}(q^2)\bar u'_N  u_N
-$$
-$$
-<N'| m_q \bar q i \gamma_5 q|N> = F_P^{q/N}(q^2)\bar u'_N i \gamma_5 u_N
-$$
-$$
-<N'| \frac{\alpha_s }{12 \pi } G^{a\mu \nu } G_{\mu\nu }^{a} |N> = F_G^{N}(q^2)\bar u'_N  u_N
-$$
-$$
-<N'| \frac{\alpha_s }{8 \pi } G^{a\mu \nu } \tilde G_{\mu\nu }^{a} |N> = F_{\tilde G} ^{N}(q^2)\bar u'_N  i \gamma_5 u_N
-$$
-$$
-<N'|m_q \bar q \sigma^{\mu\nu} q|N> = \bar u'_N [F_{T,0}^{q/N}(q^2) \sigma^{\mu \nu } + \frac{i}{2m_N} \gamma^{ [\mu} q^{ \nu ] } F_{T,1}^{q/N} (q^2) +
-\frac{i}{m_N^2} q^{ [ \mu}k_{12}^{\nu ]} F_{T,2}^{q/N} (q^2) ] u_N
-$$
-where nucleon states and $u_N$ should also depend on their momenta, but we did not write them here explicitly. The form factors are only functions of $q^2$. 
-Roughly speaking, the form factors describes the currents content of each operator of nucleon. 
+
 
 
 \end{document}
