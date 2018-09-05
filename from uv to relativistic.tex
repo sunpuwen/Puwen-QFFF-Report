@@ -22,69 +22,6 @@
 \section{From UV to Relativistic EFT}
 
 
-\begin{tikzpicture}
-  \begin{feynman}
-    \vertex (a1) ;
-    \vertex[below=1.5cm of a1] (a2);
-    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \phi \)};
-    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \phi \)};
-    \vertex at ($(a2) + (-2cm, -2cm)$) (c2){\( q \)};
-    \vertex at ($(a2) + (2cm, -2cm)$) (c1){\( q \)};
-
-    \diagram* {
-        (c2) --[ fermion, momentum'=\(k\)] (a2) --[ fermion, momentum'=\(k'\)] (c1),
-      (a1) -- [boson, edge label=\(Z^0\), momentum'=\(q\)] (a2),
-      (b1) --[scalar, momentum'=\(p\)] (a1) -- [scalar, momentum'=\(p'\)] (b2),
-    };
-  \end{feynman}
-\end{tikzpicture}
-
-\begin{tikzpicture}
-  \begin{feynman}
-    \vertex (a1) ;
-    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \phi \)};
-    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \phi \)};
-    \vertex at ($(a1) + (-2cm, -2cm)$) (c2){\( q \)};
-    \vertex at ($(a1) + (2cm, -2cm)$) (c1){\( q \)};
-
-    \diagram* {
-        (c2) --[ fermion, momentum'=\(k\)] (a1) --[ fermion, momentum'=\(k'\)] (c1),
-      (b1) --[scalar, momentum'=\(p\)] (a1) -- [scalar, momentum'=\(p'\)] (b2),
-    };
-  \end{feynman}
-\end{tikzpicture}
-
-
- \begin{tikzpicture}
-  \begin{feynman}
-    \vertex (a1) ;
-    \vertex[below=1.5cm of a1] (a2);
-    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \chi^0 \)};
-    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \chi^0 \)};
-    \vertex at ($(a2) + (-2cm, -2cm)$) (c2){\( q \)};
-    \vertex at ($(a2) + (2cm, -2cm)$) (c1){\( q \)};
-    \diagram* {
-        (c2) --[ fermion, momentum'=\(k\)] (a2) --[ fermion, momentum'=\(k'\)] (c1),
-      (a1) -- [boson, edge label=\(Z^0\), momentum'=\(q\)] (a2),
-      (b1) --[fermion, momentum'=\(p\)] (a1) -- [fermion, momentum'=\(p'\)] (b2),
-    };
-  \end{feynman}
-\end{tikzpicture}
-
-\begin{tikzpicture}
-  \begin{feynman}
-    \vertex (a1) ;
-    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \chi^0 \)};
-    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \chi^0 \)};
-    \vertex at ($(a1) + (-2cm, -2cm)$) (c2){\( q \)};
-    \vertex at ($(a1) + (2cm, -2cm)$) (c1){\( q \)};
-    \diagram* {
-        (c2) --[ fermion, momentum'=\(k\)] (a1) --[ fermion, momentum'=\(k'\)] (c1),
-      (b1) --[fermion, momentum'=\(p\)] (a1) -- [fermion, momentum'=\(p'\)] (b2),
-    };
-  \end{feynman}
-\end{tikzpicture}
-
 
 The neutral components of scalar doublet or fermion-like doublet serve as the dark matter candidate. Both candidates interact with nucleons in direct detection through quarks and not gluons at leading order. 
 Both scalar and fermionic SU(2) electroweak doublet, at leading order, interact via T-channel Z boson exchange. The momentum dependence enters through several places, including S-matrix elements and form factors. 
@@ -181,9 +118,26 @@ where
  \end{aligned}
    \end{equation}
 The Feynman diagram
-$$
-ad
-$$
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a1) ;
+    \vertex[below=1.5cm of a1] (a2);
+    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \phi \)};
+    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \phi \)};
+    \vertex at ($(a2) + (-2cm, -2cm)$) (c2){\( q \)};
+    \vertex at ($(a2) + (2cm, -2cm)$) (c1){\( q \)};
+
+    \diagram* {
+        (c2) --[ fermion, momentum'=\(k\)] (a2) --[ fermion, momentum'=\(k'\)] (c1),
+      (a1) -- [boson, edge label=\(Z^0\), momentum'=\(q\)] (a2),
+      (b1) --[scalar, momentum'=\(p\)] (a1) -- [scalar, momentum'=\(p'\)] (b2),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
 can now be evaluated 
 $$
 = [- i g_2' P^\mu][ - i\frac{g_2}{\cos \theta_W}  c_L^q] [\frac{-i g_{\mu\nu}+i \frac{q_\mu q_\nu }{m_Z^2} }{q^2-m_Z^2 + i\epsilon } ] [\bar u_{S'}(k')   \gamma^\nu  (\frac{1-\gamma_5}{2}) u_S(k)]
@@ -240,7 +194,22 @@ The square matrix element of the first effective operator is evaluated in a simi
 $= -i  \mathcal C^{(6)}_{1,q} (p+p')^\mu$
 \end{center}
 which in turn leads to the matrix element
- $$
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a1) ;
+    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \phi \)};
+    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \phi \)};
+    \vertex at ($(a1) + (-2cm, -2cm)$) (c2){\( q \)};
+    \vertex at ($(a1) + (2cm, -2cm)$) (c1){\( q \)};
+    \diagram* {
+        (c2) --[ fermion, momentum'=\(k\)] (a1) --[ fermion, momentum'=\(k'\)] (c1),
+      (b1) --[scalar, momentum'=\(p\)] (a1) -- [scalar, momentum'=\(p'\)] (b2),
+    };
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+$$
 \mid \mathcal  M \mid^2 = \mid \mathcal  C_{1,q}^{(6)}  \mid^2 P_\mu P_\nu  [\bar u_{S'}(k')   \gamma^\mu  u_S(k)] [\bar u_{S}(k)   \gamma^\nu   u_{S'}(k')]
 $$
 where P also means $p+p'$ here. The spin sum then gives
@@ -295,7 +264,39 @@ This is just similar to the SM weak interactions of SM fermions. The vertex Feyn
 $= - i\frac{ g_2 }{2 \cos \theta_W}  $
 \end{center}
 and the external fermion dark matter follows the same rule as the SM fermions. 
-Therefore, the effective theory vertex of the DM-SM scattering is just a 4-Fermi like vertex proportional to the Fermi constant $G_F$. Following the above method, the relevant relativistic effective operators describing fermionic dark matter scattering with SM quarks are presented here, while a complete set are presented in the later sections for a more general discussion. The relevant operators here are
+Therefore, the effective theory vertex of the DM-SM scattering is just a 4-Fermi like vertex proportional to the Fermi constant $G_F$. 
+
+ \begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a1) ;
+    \vertex[below=1.5cm of a1] (a2);
+    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \chi^0 \)};
+    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \chi^0 \)};
+    \vertex at ($(a2) + (-2cm, -2cm)$) (c2){\( q \)};
+    \vertex at ($(a2) + (2cm, -2cm)$) (c1){\( q \)};
+    \diagram* {
+        (c2) --[ fermion, momentum'=\(k\)] (a2) --[ fermion, momentum'=\(k'\)] (c1),
+      (a1) -- [boson, edge label=\(Z^0\), momentum'=\(q\)] (a2),
+      (b1) --[fermion, momentum'=\(p\)] (a1) -- [fermion, momentum'=\(p'\)] (b2),
+    };
+  \end{feynman}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a1) ;
+    \vertex at ($(a1) + (2cm, 2cm)$) (b2){\( \chi^0 \)};
+    \vertex at ($(a1) + (-2cm, 2cm)$) (b1){\( \chi^0 \)};
+    \vertex at ($(a1) + (-2cm, -2cm)$) (c2){\( q \)};
+    \vertex at ($(a1) + (2cm, -2cm)$) (c1){\( q \)};
+    \diagram* {
+        (c2) --[ fermion, momentum'=\(k\)] (a1) --[ fermion, momentum'=\(k'\)] (c1),
+      (b1) --[fermion, momentum'=\(p\)] (a1) -- [fermion, momentum'=\(p'\)] (b2),
+    };
+  \end{feynman}
+\end{tikzpicture}
+
+Following the above method, the relevant relativistic effective operators describing fermionic dark matter scattering with SM quarks are presented here, while a complete set are presented in the later sections for a more general discussion. The relevant operators here are
 $$
   \mathcal Q_1^{(6)} = (\bar \chi \gamma_\mu \chi ) (\bar q \gamma^\mu q)
 $$
